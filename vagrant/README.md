@@ -61,5 +61,34 @@ Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.4.0-122-generic x86_64)
 
 vagrant@ubuntu-xenial:~$
 
-## xxxx
+## status
+$ vagrant global-status
+id       name    provider   state   directory
+--------------------------------------------------------------------------------------------------
+ec9d8e1  default virtualbox running C:/Users/fan_t/work/github.com/sky0621/study-hc-tools/vagrant
 
+The above shows information about all known Vagrant environments
+on this machine. This data is cached and may not be completely
+up-to-date. To interact with any of the machines, you can go to
+that directory and run Vagrant, or you can use the ID directly
+with Vagrant commands from any directory. For example:
+"vagrant destroy 1a2b3c4d"
+
+## destroy
+$ vagrant destroy 89716ed
+    default: Are you sure you want to destroy the 'default' VM? [y/N] y
+==> default: Forcing shutdown of VM...
+==> default: Destroying VM and associated drives...
+
+## ssh-config
+$ vagrant ssh-config
+Host default
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile C:/Users/fan_t/work/github.com/sky0621/study-hc-tools/vagrant/.vagrant/machines/default/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
